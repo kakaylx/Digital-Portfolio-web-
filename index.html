@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 150vh;
+            background: linear-gradient(135deg, #000000, #132749);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 35px;
+            margin-top: 30px;
+            margin-left: 215px;
+        }
+
+        .main-p {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff4d9d;
+            transition: transform 0.3s;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        section {
+            margin-top: 15px;
+        }
+
+        .profile-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid #ff4d9d37;
+            border-radius: 15px;
+            padding: 20px 30px;
+            width: 550px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .profile-box:hover {
+            background-color: rgba(255, 140, 197, 0.212);
+            transform: scale(1.05);
+        }
+
+        .contact {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid #ff4d9d37;
+            border-radius: 15px;
+            padding: 15px;
+            width: 220px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .contact:hover {
+            background-color: rgba(255, 140, 197, 0.212);
+            transform: scale(1.05);
+        }
+
+        .contact h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact i {
+            margin-right: 5px;
+            color: #ff4d9d90;
+        }
+
+        .contact p {
+            font-size: small;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .social-icons a {
+            font-size: 25px;
+            color: #ff4d9d;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: white;
+            transform: scale(1.2);
+        }
+
+        .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+ .top-row {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+    <img src="pics/dp.jpg" alt="Profile Picture" class="circle">
+    <section>
+        <h1>Kyle Angela F. Jumilla</h1>
+        <p><i>3rd Year – BS Information Technology</i></p>
+        <p style="margin-top: 15px;">Aspiring to be a skilled IT Professional. Driven by curiosity and a love for technology,</p>
+        <p>I am continuously learning and honing my skills to make a meaningful impact in the tech industry.</p>
+    </section>
+</div>
+    
+<div class="main-p">
+
+    <div class="contact">
+        <h3>Contact Information</h3>
+        <p><i class="fas fa-phone"></i> 09512351707</p>
+        <p><i class="fas fa-envelope"></i> j.kyleangelaf@gmail.com</p>
+
+        <div class="social-icons">
+            <a href="https://github.com/kakaylx" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/kakaylx/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/kakaylx.a" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+
+        <h3>Hobbies</h3>
+        <ul>
+            <li>Dancing</li>
+            <li>Crafting</li>
+            <li>Gaming</li>
+            <li>Watching Movies</li>
+            <li>Cooking</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <h4><i>Technical Skills</i></h4>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Basic Python</li>
+            <li>Basic Java</li>
+            <li>MS Office</li>
+            <li>Graphics / Web Design</li>
+        </ul>
+
+        <h4><i>Soft Skills</i></h4>
+        <ul>
+            <li>Good Communication</li>
+            <li>Team Collaboration</li>
+            <li>Time Management</li>
+            <li>Willingness to Learn</li>
+        </ul>
+    </div>
+
+    <div class="profile-box">
+        <h3>Personal Information</h3>
+        <section>
+            <p><b>Full Name:</b> Kyle Angela Falle-Jumilla</p>
+            <p><b>Nickname:</b> Kakayl</p>
+            <p><b>Age:</b> 21 years old</p>
+            <p><b>Birthdate:</b> December 26, 2004</p>
+            <p><b>Address:</b> Ph 1 Villa Flora Subdivision, Cugman, Cagayan de Oro City</p>
+        </section>
+
+        <h3>Educational Background</h3>
+
+        <section>
+            <p><b>University of Science and Technology of the Southern Philippines</b></p>
+            <p>Bachelor of Science in Information Technology</p>
+            <p>2023 – Present</p>
+        </section>
+
+        <section>
+            <p><b>Liceo de Cagayan University</b></p>
+            <p>Senior High School – STEM</p>
+            <p>2021 – 2023</p>
+        </section>
+
+        <section>
+            <p><b>Cugman National High School</b></p>
+            <p>2017 – 2021</p>
+        </section>
+
+        <section>
+            <p><b>Cugman Elementary School</b></p>
+            <p>2010 – 2017</p>
+        </section>
+    </div>
+</div>
+</div>
+</body>
+</html>
