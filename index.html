@@ -110,24 +110,28 @@ body {
     margin-bottom: 10px;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 .gallery-pic {
-    height: 200px;
-    margin: 5px;
-    min-width: 150px;
-    max-width: 360px;
+    flex: 1 1 150px;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     opacity: 0.3;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
     border-radius: 10px;
     background-color: #ccc;
 }
 
-
 .gallery-pic:hover {
-    flex: 3;
+    flex: 2 1 150px;
     opacity: 1;
-    transform: scale(1.3);
-    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
 }
 
 p {
@@ -188,6 +192,16 @@ p {
     .profile-box, .contact {
         flex: 1 1 90%;
         padding: 15px;
+    }
+
+    .gallery-pic {
+        max-width: 150px;
+    }
+
+    .cont {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
     }
 }
 
