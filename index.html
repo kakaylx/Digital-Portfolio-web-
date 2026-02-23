@@ -1,140 +1,209 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Portfolio</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 150vh;
-            background: linear-gradient(135deg, #000000, #132749);
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        .main {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 35px;
-            margin-top: 30px;
-            margin-left: 215px;
-        }
-
-        .main-p {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 35px;
-            margin-top: 30px;
-        }
-
-        .circle {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #ff4d9d;
-            transition: transform 0.3s;
-        }
-
-        .circle:hover {
-            transform: scale(1.1);
-        }
-
-        p {
-            margin: 0;
-        }
-
-        section {
-            margin-top: 15px;
-        }
-
-        .profile-box {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 2px solid #ff4d9d37;
-            border-radius: 15px;
-            padding: 20px 30px;
-            width: 550px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-
-        .profile-box:hover {
-            background-color: rgba(255, 140, 197, 0.212);
-            transform: scale(1.05);
-        }
-
-        .contact {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 2px solid #ff4d9d37;
-            border-radius: 15px;
-            padding: 15px;
-            width: 220px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-
-        .contact:hover {
-            background-color: rgba(255, 140, 197, 0.212);
-            transform: scale(1.05);
-        }
-
-        .contact h3 {
-            margin-bottom: 10px;
-        }
-
-        .contact i {
-            margin-right: 5px;
-            color: #ff4d9d90;
-        }
-
-        .contact p {
-            font-size: small;
-            margin-bottom: 10px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin: 15px 0;
-        }
-
-        .social-icons a {
-            font-size: 25px;
-            color: #ff4d9d;
-            transition: transform 0.3s, color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: white;
-            transform: scale(1.2);
-        }
-
-        .left-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+:root {
+    --main-border-color: #ff4d9d;
+    --hover-bg-color: rgba(255, 140, 197, 0.212);
 }
- .top-row {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            padding: 40px;
-        }
-    </style>
+
+body {
+    margin: 0;
+    min-height: 150vh;
+    background: linear-gradient(135deg, #000000, #132749);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.main, .main-p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 35px;
+    margin: 30px auto 0 auto;
+    padding: 0 15px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff4d9d;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.profile-box, .contact {
+    border: 2px solid var(--main-border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.profile-box:hover, .contact:hover {
+    background-color: var(--hover-bg-color);
+    transform: scale(1.05);
+}
+
+.profile-box {
+    flex: 1 1 500px;
+}
+
+.contact {
+    flex: 1 1 250px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-box {
+    border: 2px solid var(--main-border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+    margin-top: 30px;
+    width: 70%;
+    max-width: 1000px;
+}
+
+.cont{
+    width: 700px;
+    height: 400px;
+    background-color: #f3d7d4;
+    margin-top: 10px; 
+    margin-bottom: 0;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    text-align: c;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxc{
+    display: block;
+    align-content: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.gallery-pic {
+    height: 200px;
+    margin: 5px;
+    min-width: 150px;
+    max-width: 360px;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+
+.gallery-pic:hover {
+    flex: 3;
+    opacity: 1;
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.social-icons a {
+    font-size: 25px;
+    color: #ff4d9d;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.border-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #0e4c92;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.border-btn:hover {
+    background-color: #ff4d9d;
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .main, .main-p {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-box, .contact {
+        flex: 1 1 90%;
+        padding: 15px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="main">
-    <img src="pics/dp.jpg" alt="Profile Picture" class="circle">
+    <div style="position: relative; display: inline-block;">
+        <img src="pics/dp.png" alt="Profile Picture" id="profilePic" class="circle">
+        <button id="borderBtn" class="border-btn">
+            <i class="fas fa-heart"></i>
+        </button>
+    </div>
+
     <section>
         <h1>Kyle Angela F. Jumilla</h1>
         <p><i>3rd Year – BS Information Technology</i></p>
@@ -142,83 +211,114 @@
         <p>I am continuously learning and honing my skills to make a meaningful impact in the tech industry.</p>
     </section>
 </div>
-    
+
 <div class="main-p">
 
-    <div class="contact">
-        <h3>Contact Information</h3>
-        <p><i class="fas fa-phone"></i> 09512351707</p>
-        <p><i class="fas fa-envelope"></i> j.kyleangelaf@gmail.com</p>
+<div class="contact">
+    <h3>Contact Information</h3>
+    <p><i class="fas fa-phone"></i> 09512351707</p>
+    <p><i class="fas fa-envelope"></i> j.kyleangelaf@gmail.com</p>
 
-        <div class="social-icons">
-            <a href="https://github.com/kakaylx" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/kakaylx/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/kakaylx.a" target="_blank"><i class="fab fa-facebook"></i></a>
+    <div class="social-icons">
+        <a href="https://github.com/kakaylx" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/kakaylx/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/kakaylx.a" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <h3>Hobbies</h3>
+    <ul>
+        <li>Dancing</li>
+        <li>Crafting</li>
+        <li>Gaming</li>
+        <li>Watching Movies</li>
+        <li>Cooking</li>
+    </ul>
+
+    <h3>Skills</h3>
+    <h4><i>Technical Skills</i></h4>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Basic Python</li>
+        <li>Basic Java</li>
+        <li>MS Office</li>
+        <li>Graphics / Web Design</li>
+    </ul>
+
+    <h4><i>Soft Skills</i></h4>
+    <ul>
+        <li>Good Communication</li>
+        <li>Team Collaboration</li>
+        <li>Time Management</li>
+        <li>Willingness to Learn</li>
+    </ul>
+</div>
+
+<div class="profile-box">
+    <h3>Personal Information</h3>
+    <p><b>Full Name:</b> Kyle Angela Falle-Jumilla</p>
+    <p><b>Nickname:</b> Kakayl</p>
+    <p><b>Age:</b> 21 years old</p>
+    <p><b>Birthdate:</b> December 26, 2004</p>
+    <p><b>Address:</b> Ph 1 Villa Flora Subdivision, Cugman, Cagayan de Oro City</p>
+
+    <h3>Educational Background</h3>
+
+    <p><b>University of Science and Technology of the Southern Philippines</b></p>
+    <p>Bachelor of Science in Information Technology</p>
+    <p>2023 – Present</p>
+
+    <p><b>Liceo de Cagayan University</b></p>
+    <p>Senior High School – STEM</p>
+    <p>2021 – 2023</p>
+
+    <p><b>Cugman National High School</b></p>
+    <p>2017 – 2021</p>
+
+    <p><b>Cugman Elementary School</b></p>
+    <p>2010 – 2017</p>
+</div>
+
+<div class="gallery-container">
+</div>
+    <div class="gallery-box">
+    <h2>Gallery</h2>
+    <div id="cont">
+            <div class="boxc">
+                <div class="gallery">
+                    <img src="pics/fishbook.png" class="gallery-pic">
+                    <img src="pics/qt.png" class="gallery-pic">
+                    <img src="pics/famday.png" class="gallery-pic">
+                    <img src="pics/image.png" class="gallery-pic">
+                </div>
+            </div>
         </div>
-
-        <h3>Hobbies</h3>
-        <ul>
-            <li>Dancing</li>
-            <li>Crafting</li>
-            <li>Gaming</li>
-            <li>Watching Movies</li>
-            <li>Cooking</li>
-        </ul>
-
-        <h3>Skills</h3>
-        <h4><i>Technical Skills</i></h4>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Basic Python</li>
-            <li>Basic Java</li>
-            <li>MS Office</li>
-            <li>Graphics / Web Design</li>
-        </ul>
-
-        <h4><i>Soft Skills</i></h4>
-        <ul>
-            <li>Good Communication</li>
-            <li>Team Collaboration</li>
-            <li>Time Management</li>
-            <li>Willingness to Learn</li>
-        </ul>
-    </div>
-
-    <div class="profile-box">
-        <h3>Personal Information</h3>
-        <section>
-            <p><b>Full Name:</b> Kyle Angela Falle-Jumilla</p>
-            <p><b>Nickname:</b> Kakayl</p>
-            <p><b>Age:</b> 21 years old</p>
-            <p><b>Birthdate:</b> December 26, 2004</p>
-            <p><b>Address:</b> Ph 1 Villa Flora Subdivision, Cugman, Cagayan de Oro City</p>
-        </section>
-
-        <h3>Educational Background</h3>
-
-        <section>
-            <p><b>University of Science and Technology of the Southern Philippines</b></p>
-            <p>Bachelor of Science in Information Technology</p>
-            <p>2023 – Present</p>
-        </section>
-
-        <section>
-            <p><b>Liceo de Cagayan University</b></p>
-            <p>Senior High School – STEM</p>
-            <p>2021 – 2023</p>
-        </section>
-
-        <section>
-            <p><b>Cugman National High School</b></p>
-            <p>2017 – 2021</p>
-        </section>
-
-        <section>
-            <p><b>Cugman Elementary School</b></p>
-            <p>2010 – 2017</p>
-        </section>
-    </div>
 </div>
 </div>
+<script>
+
+const img = document.getElementById("profilePic");
+const btn = document.getElementById("borderBtn");
+let isBlue = false;
+
+btn.addEventListener("click", function() {
+
+    const root = document.documentElement;
+
+    if (isBlue) {
+        img.style.borderColor = "#ff4d9d";
+        root.style.setProperty('--main-border-color', '#ff4d9d');
+        root.style.setProperty('--hover-bg-color', 'rgba(255, 140, 197, 0.212)');
+    } else {
+        img.style.borderColor = "#0e4c92";
+        root.style.setProperty('--main-border-color', '#0e4c92');
+        root.style.setProperty('--hover-bg-color', 'rgba(14, 76, 146, 0.2)');
+    }
+
+    isBlue = !isBlue;
+
+});
+
+</script>
+
 </body>
 </html>
